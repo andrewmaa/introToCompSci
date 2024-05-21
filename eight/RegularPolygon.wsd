@@ -1,0 +1,28 @@
+@startuml RegularPolygon
+
+!theme carbon-gray
+skinparam classAttributeIconSize 0
+
+class RegularPolygon {
+    -n: int
+    -side: double
+    -x: double
+    -y: double
+
+    +RegularPolygon()
+    +RegularPolygon(n: int, side: double)
+    +RegularPolygon(n: int, side: double, x: double, y: double)
+    +getNumSides(): int
+    +getSideLength(): double
+    +getX(): double
+    +getY(): double
+    +setNumSides(n: int): void
+    +setSideLength(side: int): void
+    +setX(x: double): void
+    +setY(y: double): void
+    +getPerimeter(): void
+    +getArea(): void
+
+}
+
+@enduml

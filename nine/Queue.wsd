@@ -1,0 +1,15 @@
+@startuml Queue 
+
+!theme carbon-gray
+skinparam classAttributeIconSize 0
+
+class Queue {
+    -elements: int[]
+    -size: int 
+    +Queue()
+    +enqueue(v: int)
+    +dequeue(): int
+    +empty(): boolean
+    +getSize(): int
+    
+}

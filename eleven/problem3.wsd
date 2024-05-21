@@ -1,0 +1,36 @@
+@startuml problem3 
+
+!theme carbon-gray
+skinparam classAttributeIconSize 0
+
+interface Comparable {
+    +compareTo(o: Object): int
+}
+
+class Circle extends GeometricObject implements Comparable{
+    -radius: double
+    +Circle()
+    +Circle(radius: double)
+    +Circle(radius: double, color: String, filled: boolean)
+    +equals(o: Object): boolean
+    +compareTo(other: Circle): int
+    +getRadius(): double
+    +setRadius(radius: double): void 
+    +getDiameter(): double 
+    +getArea(): double 
+    +getPerimeter(): double 
+    +getCircleInfo(): void
+}
+
+class GeometricObject {
+    -color: String
+    -filled: boolean 
+    -dateCreated: Date 
+    +GeometricObject()
+    +GeometricObject(color: String, filled: boolean)
+    +getColor(): String 
+    +setColor(color: String)
+    +setFilled(filled: boolean): void
+    +getDateCreated(): Date 
+    +toString(): String
+}

@@ -1,0 +1,37 @@
+@startuml problem4
+
+!theme carbon-gray
+skinparam classAttributeIconSize 0
+
+class Octagon extends GeometricObject implements Comparable, Cloneable {
+    -side: double
+    +Octagon()
+    +Octagon(side: double)
+    +setSideVal(side: double): void
+    +getSideVal(): double 
+    +getArea(): double
+    +getPerimeter(): double 
+    +compareTo(a: Octagon): int
+    +clone(): Object
+}
+
+class GeometricObject {
+    -color: String
+    -filled: boolean 
+    -dateCreated: Date 
+    +GeometricObject()
+    +GeometricObject(color: String, filled: boolean)
+    +getColor(): String 
+    +setColor(color: String)
+    +setFilled(filled: boolean): void
+    +getDateCreated(): Date 
+    +toString(): String
+}
+
+interface Comparable {
+    +compareTo(o: Object): int
+}
+
+interface Cloneable {
+    +clone(): Object
+}

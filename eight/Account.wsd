@@ -1,0 +1,27 @@
+@startuml Account
+
+!theme carbon-gray
+skinparam classAttributeIconSize 0
+
+class Account {
+    -id: int
+    -balance: double
+    -annualInterestRate: double
+    -dateCreated: String
+
+    +Account()
+    +Account(id: int, balance: double)
+    +getId(): int
+    +getBalance(): double
+    +getAnnualInterestRate(): double
+    +setId(id: int): void
+    +setBalance(balance: double): void
+    +setAnnualInterest(annualInterestRate: double): vid
+    +getDateCreated(): String
+    +getMonthlyInterestRate(): double
+    +getMonthlyInterest(): double
+    +withdraw(money: double)
+    +deposit(money: double)
+}
+
+@enduml
